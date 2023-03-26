@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Statistics from '../statistics/Statistics';
 import FeedbackOptions from '../feedbackOptions/FeedbackOptions';
 import Section from '../section/Section';
@@ -37,7 +38,6 @@ class App extends Component {
 
     return (
       <div>
-
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -55,10 +55,9 @@ class App extends Component {
             hasFeedback={this.state.hasFeedback}
           />
         </Section>
-
       </div>
     );
   }
 }
 
-export default App
+export default App;
