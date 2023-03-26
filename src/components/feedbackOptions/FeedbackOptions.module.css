@@ -1,0 +1,23 @@
+.feedbackOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.feedbackOptions button {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.feedbackOptions button:hover,
+.feedbackOptions button:focus {
+  background-color: #f2f2f2;
+}
