@@ -10,14 +10,36 @@
   margin-right: 10px;
   font-size: 16px;
   padding: 10px 20px;
+  min-width: 100px;
   border: none;
   border-radius: 4px;
-  background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
-.feedbackOptions button:hover,
-.feedbackOptions button:focus {
-  background-color: #f2f2f2;
+.feedbackOptions .btn-good {
+  background-color: rgba(76, 175, 80, 0.5);
+}
+
+.feedbackOptions .btn-good:hover,
+.feedbackOptions .btn-good:focus {
+  background-color: rgb(76, 175, 80);
+}
+
+.feedbackOptions .btn-neutral {
+  background-color: rgba(255, 235, 59, 0.5);
+}
+
+.feedbackOptions .btn-neutral:hover,
+.feedbackOptions .btn-neutral:focus {
+  background-color: rgb(255, 235, 59);
+}
+
+.feedbackOptions .btn-bad {
+  background-color: rgba(244, 67, 54, 0.5);
+}
+
+.feedbackOptions .btn-bad:hover,
+.feedbackOptions .btn-bad:focus {
+  background-color: rgb(244, 67, 54);
 }
