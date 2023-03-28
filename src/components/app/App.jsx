@@ -3,19 +3,18 @@ import React, { Component } from 'react';
 import Statistics from '../statistics/Statistics';
 import FeedbackOptions from '../feedbackOptions/FeedbackOptions';
 import Section from '../section/Section';
+import Notification from 'components/notification/Notification';
 
 class App extends Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
-    hasFeedback: false,
   };
 
   handleFeedbackBtnClick = option => {
     this.setState(prevState => ({
       [option]: prevState[option] + 1,
-      hasFeedback: true,
     }));
   };
 
@@ -45,14 +44,17 @@ class App extends Component {
         </Section>
 
         <Section title="Statistics">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positivePercentage}
-            hasFeedback={this.state.hasFeedback}
-          />
+          {this.countTotalFeedbacks() > 0 ? (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positivePercentage}
+            />
+          ) : (
+            <Notification message="There is no feedback yet" />
+          )}
         </Section>
       </div>
     );
